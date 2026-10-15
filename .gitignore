@@ -1,0 +1,10 @@
+# Credenciales y configuración local (aparecen desde S9; el repositorio es público)
+src/config/conexion.php
+.env
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Bitácoras y temporales
+*.log
