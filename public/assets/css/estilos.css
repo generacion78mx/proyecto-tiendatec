@@ -3,6 +3,8 @@
     --color-acento: #2e86ab;
     --color-texto: #212529;
     --color-fondo: #f5f7fa;
+    --color-acento: #1f6a8a; 
+    --color-error: #b3261e;
     --fuente-base: "Segoe UI", Arial, sans-serif;
     --espaciado-base: 8px;
     --columnas-catalogo: 2;
@@ -49,6 +51,12 @@ nav a{
 nav a:hover{
     color: var(--color-acento);
     text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+nav a[aria-current]{
+    border-bottom: 3px solid white;
+    padding-bottom: 2px;
 }
 
 .tarjetas-productos{
@@ -141,3 +149,77 @@ h2{
     font-size: 1.1rem;
     margin: 0 0 4px 0;
 }
+
+.campo{
+    margin-bottom: calc(var(--espaciado-base) * 2);
+}
+
+label{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+input{
+    width:100%;
+    max-width: 420px;
+    padding: var(--espaciado-base);
+    border: 1px solid #6c757d;
+    border-radius: 4px;
+    font: inherit;
+}
+
+input:user-invalid{
+    border-color:var(--color-error);
+}
+
+.ayuda-campo{
+    font-size: 0.875 rem;
+    margin: 4px 0 0;
+}
+
+.error-campo{
+    display: none;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--color-error);
+    margin: 4px 0 0;
+}
+
+input:user-invalid ~ .error-campo{
+    display:block;
+}
+
+.boton-agregar,button[type="submit"]{
+    display: inline-block;
+    padding: calc(var(--espaciado-base) * 1.5 ) calc(var(--espaciado-base) * 2 );
+    background-color: var(--color-acento);
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.migas ol{
+    list-style: none;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: var(--espaciado-base);
+    margin: calc(var(--espaciado-base) * 2) 0;
+    padding: 0;
+}
+
+.migas a{
+    color: var(--color-acento);
+}
+
+.migas li + li::before{
+    content: "/";
+    margin-right: var(--espaciado-base);
+}
+
+
+
