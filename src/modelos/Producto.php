@@ -37,12 +37,12 @@ class Producto{
     private static function exigirCampos(array $registro):void{
         foreach(self::CAMPOS_OBLIGATORIOS as $campo){
             if(!array_key_exists($campo,$registro)){
-                throw new InvalidArgumentException("El producto no tiene el campo: ", $campo);
+                throw new InvalidArgumentException("El producto no tiene el campo ".$campo);
             }
         }
     }
 
-    public static function desdeArreglo(array $registro):Producto{
+    public static function desdeArreglo(array $registro): Producto{
         self::exigirCampos($registro);
 
         return new Producto(
@@ -72,6 +72,10 @@ class Producto{
         return $this->precio;
     }
 
+    public function obtenerDescripcion(): string{
+        return $this->decripcion;
+    }
+
     public function obtenerStock(): int{
         return $this->stock;
     }
@@ -86,7 +90,7 @@ class Producto{
 
     public function obtenerPrecioFormateado(): string{
         return '$'.number_format($this->precio,2);
-    }    
+    }
 
 }
 

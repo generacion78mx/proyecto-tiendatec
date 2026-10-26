@@ -15,14 +15,13 @@ echo $audio->obtenerNombre().'<br> --------------- <br>';
 $mouse = Producto::desdeArreglo([
     'id' => 1,
     'nombre' => 'Mouse Inalámbrico',
-    'categoria' => 'Periféricos',
+    'categoria' => 'Periférico',
     'precio' => 499.00,
-    'descripcion' => 'Mouse inalámbrico con alte precisión',
+    'descripcion' => 'Mouse inalámbrico con alta presición',
     'stock' => 0,
-    'imagen' => 'https://placehold.com/200x150?text=Mouse',
-
+    'imagen' =>'https://placehold.co/200x150?text=Mouse'
 ]);
 
-echo $mouse->obtenerNombre().' ('.$mouse->obtenerCategoria()->obtenerNombre().') cuesta '.$mouse->obtenerPrecioFormateado().'<br>'; 
-echo $mouse->estaDisponible() ? 'Hay existencias' : 'AGOTADO';
+echo $mouse->obtenerNombre().'('.$mouse->obtenerCategoria()->obtenerNombre().') y cuesta '.$mouse->obtenerPrecioFormateado().'<br>';
+echo $mouse->estaDisponible() ? 'Existe producto' : 'Agotado';
 ?>
