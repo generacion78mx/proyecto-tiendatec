@@ -73,7 +73,7 @@ class Producto{
     }
 
     public function obtenerDescripcion(): string{
-        return $this->decripcion;
+        return $this->descripcion;
     }
 
     public function obtenerStock(): int{

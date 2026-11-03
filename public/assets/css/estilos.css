@@ -221,5 +221,17 @@ input:user-invalid ~ .error-campo{
     margin-right: var(--espaciado-base);
 }
 
+.disponibilidad{
+    font-size: 0.875rem;
+    font-weight: bold;
+    margin: 0;
+}
 
+.disponible{
+    color: var(--color-exito);
+}
+
+.agotado{
+    color: var(--color-error);
+}
 
