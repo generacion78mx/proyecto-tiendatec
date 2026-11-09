@@ -1,5 +1,6 @@
 # Credenciales y configuración local (aparecen desde S9; el repositorio es público)
 src/config/conexion.php
+dev/adminer.php
 .env
 
 # Archivos del sistema operativo
